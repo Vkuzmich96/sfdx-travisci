@@ -20,6 +20,7 @@ before_install:
 - sfdx force:auth:jwt:grant --clientid 3MVG9G9pzCUSkzZuoSEAZqTxIokANFxNJ90w4631ypYNnWio6yFpQi1RUXySkcbwpivuJzYG8WgHWs4Mj1T2J --jwtkeyfile assets/server.key --username vlad@nocompany.com --setdefaultdevhubusername -a HubOrg
 
 script:
+- sfdx force:org:list
 - sfdx force:org:create -v HubOrg -s -f config/project-scratch-def.json -a ciorg --wait 2
 - sfdx force:org:display -u ciorg
 - sfdx force:source:push -u ciorg
