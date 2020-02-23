@@ -34,7 +34,7 @@ jobs:
         - sfdx force:source:convert -d source/
         - sfdx force:mdapi:deploy -d source/ -u vlad@nocompany.com
 stages:
-  - name: test
+  #- name: test
     # require the type to be a PR
     #if: type = push
   - name: deploy
