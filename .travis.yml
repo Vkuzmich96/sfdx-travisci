@@ -35,8 +35,8 @@ jobs:
         - sfdx force:mdapi:deploy -d source/ -u vlad@nocompany.com
 stages:
   - name: test
-    # require the type to be a PR
-    if: type = push
+    #require the type to be a PR
+    if: type = api
   - name: deploy
-    ## require the type to be push to master
-    if: type = merged
+    # require the type to be push to master
+    if: type = push AND branch = master
