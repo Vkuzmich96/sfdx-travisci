@@ -36,7 +36,7 @@ jobs:
 stages:
   - name: test
     # require the type to be a PR
-    if: type = pull_request OR push
+    if: type = push
   - name: deploy
     ## require the type to be push to master
     if: type = merged
